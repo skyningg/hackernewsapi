@@ -80,8 +80,14 @@ WSGI_APPLICATION = 'hackernews.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       # 'ENGINE': 'django.db.backends.sqlite3',
+       #'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'hackmovie',
+       'USER': 'postgres',
+       'PASSWORD': 'postgres',
+       'HOST': '34.174.192.83',  # O la dirección IP de tu servidor PostgreSQL
+       'PORT': '5432',        # Puerto por defecto de PostgreSQL
     }
 }
 
