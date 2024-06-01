@@ -143,3 +143,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+STATIC_URL = '/static/'
+STATIC_ROOT = '/path/to/static/'

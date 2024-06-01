@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "9001:9001"
+    volumes:
+      - .:/app
+        - ./static:/static
+    command: gunicorn --chdir hackernews --bind :9001 hackernews.wsgi:application
+    environment:
+      - DEBUG=1
+      - ALLOWED_HOSTS=*
